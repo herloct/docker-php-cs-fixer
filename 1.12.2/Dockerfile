@@ -9,6 +9,10 @@ RUN apk update --no-cache && \
 RUN curl -L http://get.sensiolabs.org/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer && \
     chmod +x /usr/local/bin/php-cs-fixer
 
+RUN mkdir -p /project
+VOLUME ["/project"]
+WORKDIR /project
+
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh", "php-cs-fixer"]

@@ -19,7 +19,6 @@ Basic usage using current user id (uid).
 docker run --rm \
     -e LOCAL_USER_ID=$(id -u) \
     -v /local/path:/project \
-    -w /project \
     herloct/php-cs-fixer [<options>]
 ```
 
@@ -29,6 +28,5 @@ For example, to fix `src` directory to PSR1 and PSR2 standard.
 docker run --rm \
     -e LOCAL_USER_ID=$(id -u) \
     -v /local/path:/project \
-    -w /project \
     herloct/php-cs-fixer fix src
 ```
