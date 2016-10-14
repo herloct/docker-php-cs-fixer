@@ -1,15 +1,14 @@
-[Docker](http://www.docker.com/) image for [PHP Coding Standards Fixer](http://cs.sensiolabs.org/).
-
-[![](https://images.microbadger.com/badges/image/herloct/php-cs-fixer.svg)](http://microbadger.com/images/herloct/php-cs-fixer "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/herloct/php-cs-fixer.svg)](http://microbadger.com/images/herloct/php-cs-fixer "Get your own version badge on microbadger.com")
-
-## What's Inside
-
-This image is based on [official PHP 7.0 image](https://hub.docker.com/_/php/),
-using Alpine Linux instead of Debian for smaller size.
+[![](https://images.microbadger.com/badges/image/herloct/php-cs-fixer.svg)](http://microbadger.com/images/herloct/php-cs-fixer "Get your own image badge on microbadger.com")
 
 ## Supported tags and respective `Dockerfile` links
 
 * [`1.12.2`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/master/1.12.2/Dockerfile)
+
+## What is PHP Coding Standards Fixer?
+
+The PHP Coding Standards Fixer tool fixes most issues in your code when you want to follow the PHP coding standards as defined in the PSR-1 and PSR-2 documents and many more.
+
+> http://cs.sensiolabs.org/
 
 ## How to use this image
 
