@@ -2,7 +2,8 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`1.12.2`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/master/1.12.2/Dockerfile)
+* [`1.12.3`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/master/1.12.3/Dockerfile)
+* [`1.12.2`](https://github.com/herloct/docker-php-cs-fixer/blob/master/1.12.2/Dockerfile)
 
 ## What is PHP Coding Standards Fixer?
 
