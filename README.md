@@ -2,6 +2,7 @@
 
 ## Supported tags and respective `Dockerfile` links
 
+* [`2.0.0-RC`](https://github.com/herloct/docker-php-cs-fixer/blob/master/2.0.0-RC/Dockerfile)
 * [`1.12.3`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/master/1.12.3/Dockerfile)
 * [`1.12.2`](https://github.com/herloct/docker-php-cs-fixer/blob/master/1.12.2/Dockerfile)
 
