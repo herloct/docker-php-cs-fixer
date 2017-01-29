@@ -30,3 +30,7 @@ docker run --rm \
     --volume /local/path:/project \
     herloct/php-cs-fixer fix src
 ```
+
+## Volumes
+
+* **/project**: Your PHP project directory.
