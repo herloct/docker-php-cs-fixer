@@ -1,9 +1,10 @@
-[![](https://images.microbadger.com/badges/version/herloct/php-cs-fixer:2.0.1.svg)](https://microbadger.com/images/herloct/php-cs-fixer:2.0.1 "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/herloct/php-cs-fixer:2.0.1.svg)](https://microbadger.com/images/herloct/php-cs-fixer:2.0.1 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/herloct/php-cs-fixer:2.1.0.svg)](https://microbadger.com/images/herloct/php-cs-fixer:2.1.0 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/herloct/php-cs-fixer:2.1.0.svg)](https://microbadger.com/images/herloct/php-cs-fixer:2.1.0 "Get your own image badge on microbadger.com")
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`2.0.1`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/2.0.1/Dockerfile)
+* [`2.1.0`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/2.1.0/Dockerfile)
+* [`2.0.1`](https://github.com/herloct/docker-php-cs-fixer/blob/2.0.1/Dockerfile)
 * [`2.0.0`](https://github.com/herloct/docker-php-cs-fixer/blob/2.0.0/Dockerfile)
 * [`1.13.1`](https://github.com/herloct/docker-php-cs-fixer/blob/1.13.1/Dockerfile)
 
