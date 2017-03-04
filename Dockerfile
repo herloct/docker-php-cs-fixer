@@ -4,10 +4,7 @@ MAINTAINER herloct <herloct@gmail.com>
 
 ENV PHP_CS_FIXER_VERSION=2.1.1
 
-RUN apk update --no-cache \
-    && apk add --no-cache tini \
-
-    && curl -L https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v$PHP_CS_FIXER_VERSION/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer \
+RUN curl -L https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v$PHP_CS_FIXER_VERSION/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer \
     && chmod +x /usr/local/bin/php-cs-fixer \
 
     && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
@@ -15,5 +12,5 @@ RUN apk update --no-cache \
 VOLUME ["/project"]
 WORKDIR /project
 
-ENTRYPOINT ["/sbin/tini", "--", "php-cs-fixer"]
+ENTRYPOINT ["php-cs-fixer"]
 CMD ["--version"]
