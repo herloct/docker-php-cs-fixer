@@ -2,7 +2,7 @@ FROM php:7.1.3-alpine
 
 MAINTAINER herloct <herloct@gmail.com>
 
-ENV PHP_CS_FIXER_VERSION=2.1.3
+ENV PHP_CS_FIXER_VERSION=2.2.1
 
 RUN curl -L https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v$PHP_CS_FIXER_VERSION/php-cs-fixer.phar > /usr/local/bin/php-cs-fixer \
     && chmod +x /usr/local/bin/php-cs-fixer \
