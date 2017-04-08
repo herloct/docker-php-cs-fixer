@@ -1,0 +1,40 @@
+sudo: required
+dist: trusty
+
+language: php
+
+services:
+  - docker
+
+matrix:
+  fast_finish: true
+  include:
+    - env:
+      - PHP_CS_FIXER_VERSION=2.1.3
+      - IS_LATEST=1
+
+before_script:
+  - docker build --rm --tag herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH .
+  - docker run --rm herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH
+
+script:
+  - cd tests
+  - docker run --rm 
+    --volume $(pwd):/project
+    herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH fix .
+  - ls -la .
+  - if [[ ! -f "deploy.php" ]]; then exit 1; fi
+
+after_success:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+  - if [[ $TRAVIS_BRANCH ]] && [[ -z $TRAVIS_TAG ]]; then
+    docker push herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH;
+    fi
+  - if [[ $TRAVIS_TAG ]]; then
+    docker tag herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION;
+    docker push herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION;
+    fi
+  - if [[ $TRAVIS_TAG ]] && [[ $IS_LATEST == 1 ]]; then
+    docker tag herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION herloct/php-cs-fixer:latest;
+    docker push herloct/php-cs-fixer:latest;
+    fi
