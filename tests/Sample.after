@@ -1,8 +1,8 @@
 <?php
 
-class Sample 
+class Sample
 {
-    public function doSomething() 
+    public function doSomething()
     {
         //
     }
