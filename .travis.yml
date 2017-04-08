@@ -23,7 +23,8 @@ script:
     --volume $(pwd):/project
     herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH fix .
   - ls -la .
-  - if [[ ! -f "deploy.php" ]]; then exit 1; fi
+  - if [[ ! -f "Sample.php" ]]; then exit 1; fi
+  - cat Sample.php
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
