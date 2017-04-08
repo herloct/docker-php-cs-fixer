@@ -1,12 +1,11 @@
-[![](https://images.microbadger.com/badges/version/herloct/php-cs-fixer:2.1.1.svg)](https://microbadger.com/images/herloct/php-cs-fixer:2.1.1 "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/herloct/php-cs-fixer:2.1.1.svg)](https://microbadger.com/images/herloct/php-cs-fixer:2.1.1 "Get your own image badge on microbadger.com")
+[![license](https://img.shields.io/github/license/herloct/docker-php-cs-fixer.svg)]() 
+[![Build Status](https://travis-ci.org/herloct/docker-php-cs-fixer.svg?branch=master)](https://travis-ci.org/herloct/docker-php-cs-fixer)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`2.1.1`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/2.1.1/Dockerfile)
-* [`2.1.0`](https://github.com/herloct/docker-php-cs-fixer/blob/2.1.0/Dockerfile)
+* [`2.1.3`, `latest`](https://github.com/herloct/docker-php-cs-fixer/blob/2.1.3/Dockerfile)
+* [`2.1.1`](https://github.com/herloct/docker-php-cs-fixer/blob/2.1.1/Dockerfile)
 * [`2.0.1`](https://github.com/herloct/docker-php-cs-fixer/blob/2.0.1/Dockerfile)
-* [`2.0.0`](https://github.com/herloct/docker-php-cs-fixer/blob/2.0.0/Dockerfile)
 * [`1.13.1`](https://github.com/herloct/docker-php-cs-fixer/blob/1.13.1/Dockerfile)
 
 ## What is PHP Coding Standards Fixer?
@@ -23,7 +22,7 @@ Basic usage using current user.
 docker run --rm \
     --user $(id -u):$(id -g) \
     --volume /local/path:/project \
-    herloct/php-cs-fixer [<options>]
+    herloct/php-cs-fixer[:tag] [<options>]
 ```
 
 For example, to fix `src` directory to PSR1 and PSR2 standard.
@@ -37,4 +36,4 @@ docker run --rm \
 
 ## Volumes
 
-* **/project**: Your PHP project directory.
+* `/project`: Your PHP project directory.
