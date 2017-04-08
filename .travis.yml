@@ -21,10 +21,10 @@ script:
   - cd tests
   - docker run --rm 
     --volume $(pwd):/project
-    herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH fix .
+    herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH fix Sample.php
   - ls -la .
   - if [[ ! -f "Sample.php" ]]; then exit 1; fi
-  - cat Sample.php
+  - cmp --silent Sample.after Sample.php
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
