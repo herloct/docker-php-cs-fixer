@@ -25,7 +25,7 @@ script:
   - ls -la .
   - if [[ ! -f "Sample.php" ]]; then exit 1; fi
   - cat Sample.php
-  - cmp --silent Sample.after Sample.php
+  - cmp Sample.after Sample.php
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
