@@ -10,7 +10,7 @@ matrix:
   fast_finish: true
   include:
     - env:
-      - PHP_CS_FIXER_VERSION=2.2.3
+      - PHP_CS_FIXER_VERSION=2.2.4
       - IS_LATEST=1
 
 before_script:
