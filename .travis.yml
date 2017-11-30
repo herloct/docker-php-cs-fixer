@@ -10,7 +10,7 @@ matrix:
   fast_finish: true
   include:
     - env:
-      - PHP_CS_FIXER_VERSION=2.3.2
+      - PHP_CS_FIXER_VERSION=2.7.1
       - IS_LATEST=1
 
 before_script:
@@ -28,7 +28,7 @@ script:
   - cmp Sample.after Sample.php
 
 after_success:
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin;
   - if [[ $TRAVIS_BRANCH ]] && [[ -z $TRAVIS_TAG ]]; then
     docker push herloct/php-cs-fixer:$PHP_CS_FIXER_VERSION-$TRAVIS_BRANCH;
     fi
