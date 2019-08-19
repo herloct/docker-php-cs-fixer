@@ -1,6 +1,6 @@
 pipeline:
 
-  docker-buikd:
+  docker-build:
     image: plugins/docker
     dockerfile: Dockerfile
     repo: mcom/docker-php-cs-fixer
