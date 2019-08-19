@@ -7,7 +7,7 @@ pipeline:
     tags: [ "dev"]
     secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
     when:
-      event: [pull_request]
+      event: [ push, pull_request ]
 
   publish:
     image: plugins/docker
@@ -16,4 +16,4 @@ pipeline:
     tags: [ "${DRONE_COMMIT_SHA:0:7}", "${DRONE_TAG=latest}" ]
     secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
     when:
-      event: [ tag, push ]
+      event: [ tag ]
