@@ -1,6 +1,6 @@
 FROM php:7.2.14-alpine
 
-MAINTAINER herloct <herloct@gmail.com>
+MAINTAINER magento-mcom
 
 ENV PHP_CS_FIXER_VERSION=2.14.0
 

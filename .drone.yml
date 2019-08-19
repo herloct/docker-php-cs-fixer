@@ -1,0 +1,9 @@
+pipeline:
+  publish:
+    group: pack
+    image: plugins/docker
+    repo: mcom/docker-php-cs-fixer
+    tags: [ "${DRONE_COMMIT_SHA:0:7}", "${DRONE_TAG=latest}" ]
+    secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
+    when:
+      event: [ tag, push ]
